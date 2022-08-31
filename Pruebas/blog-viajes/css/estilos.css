@@ -1,0 +1,161 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: verdana, geneva, serif;
+}
+header{
+    padding: 20px 0;
+}
+div.contenedor{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*navegacion*/
+.navegacion{
+    background-color: brown;
+}
+nav{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+nav ul{
+    list-style: none; /*quita los puntos que genera una lista*/
+}
+nav > ul > li{ /*Usando mayor que, afectamos solo las del primer nivel*/
+    float: left;
+}
+nav ul::after{ 
+    content: "";
+    display: block; /*bloque necesario si usamos float ya que limpia los errores que genera*/
+    clear: both;
+}
+nav ul li a{
+    display: inline-block;
+    width: 200px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+}
+nav ul li a:hover{
+    background-color: #00b904;
+}
+/*Segundo nivel*/
+nav ul ul{ /*poniendo los 2 ul, selecionamos los 2 grupos, el primario y luego el secundario*/
+    position: absolute;
+    top: 100%;
+    background-color: rgba(0, 184, 228, 0.7);
+    display: none;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul li:hover{
+    background-color: rgba(0, 184, 228, 0.7);
+}
+/*Contenido principal*/
+div.contenido::after{ /*":after" y los otros atributos son los que se encargan de arreglar el efecto del "float" en otros elementos y este es el elemeto padre que lo contiene.*/
+    content: " ";
+    display: block;
+    clear: both;
+}
+main{
+    width: 70%;
+    float: left;
+    padding-right: 40px;
+}
+/*Entradas de posts*/
+article{
+    margin-top: 30px;
+}
+h2{
+    color: #00b8e4;
+    margin-bottom: 20px;
+}
+article img{
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+article p{
+    line-height: 2;
+    text-align: justify;
+}
+.boton{
+    background-color: cyan;
+    padding: 10px 30px;
+    display: inline-block; /*nos permite acomodar nuestros elementos dentro en bloques y que no esten todos juntos*/
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/*sidebar*/
+aside{
+    float: right; /*Siempre hay que limpiar el float y se debe hacer en el elemento padre*/
+    width: 30%;
+    margin-top: 30px;
+}
+aside ul{
+    list-style: none;
+}
+aside ul li{
+    padding: 10px 0 10px 10px;
+}
+aside ul li:hover{
+    background-color: #00b8c4;
+    cursor: pointer;
+}
+aside ul li{
+    color: #00b8c4;
+    text-decoration: none;
+}
+aside ul li:hover {
+    color: #ffffff;
+}
+/*footer*/
+footer{
+    background-color: brown;
+    padding-top: 40px; /*aumenta la separacion en lo interno superior del contenido*/
+    margin-top: 30px; /*aumenta la separacion en lo interno inferior del contenido*/
+}
+footer h2{
+    color: #ffffff;
+}
+footer .contenedor::after{ /*elemento padre en el cual se limpian el "float" para usarlo sin problema en cualquier otro elemento del "div.contenedor"*/
+    content: "";
+    display: block;
+    clear: both;
+}
+footer div.nosotros{
+    float: left;
+    width: 30%;
+    color: #ffffff;
+}
+/*footer menu*/
+footer div.menu{
+    float: right;
+    width: 40%;
+    text-align: right;
+}
+footer nav{
+    width: auto;
+}
+footer nav ul li a{
+    width: auto;
+}
+p.copyright{
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+}

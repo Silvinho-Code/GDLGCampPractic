@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica;
+}
+div.contenido-superior {
+  padding: 20px;
+}
+div.contenido-inferior > div {
+  padding:20px;
+}
+@media only screen and (min-width:768px) {
+  div.contenido-inferior > div { /*el selector ">", ayuda a seleccionar ambos div hijos*/
+    width: 50%; /*danddole el 50%, le dara la mitad de espacio del total a los div*/
+    float: left; /*el "float" nos permite hacer columnas con el contenido del div, sino quedarian en una sola columna*/
+  }
+  div.contenedor {
+    max-width: 1100px;
+    margin:0 auto; /*nos permite que el contenido no se vaya mucho a las orillas y lo centra*/
+  }
+}

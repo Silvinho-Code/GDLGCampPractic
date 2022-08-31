@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multimedia Audio y Vídeo en HTML</title>
+
+    <link rel="stylesheet" href="css/normaliza.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <h2>Videos para HTML5</h2>
+    <!--En el atributo "preload", podemos poner 3 opcniones: auto(precarga la info y reproducción), metadata(precarga solo la duración y la imagen, ahorrando datos) y none(no carga nada-->
+    <!--"preload="auto" autoplay", autoreproducción-->
+    <!--"preload="none"", no carga los datos sino hasta que se e da play-->
+    <video width="500" controls preload="auto" loop poster="img/poster.jpg"> <!--"loop", hace que la reproducción se repita siempre-->
+        <!--"preload="metadata" poster="archivo", Hace que la ventanad de un video, tenga una imgagen en vez de descargar los datos del video sino hasta que el usuario le reproduce-->
+        <!--"muted", hace que los videos que se reproducen automaticamente "autoplay", lo hagan sin sonido-->
+        <!--"Width", le damos anchura a nuestros videos-->
+        <source src="video/codigo.mp4" type="video/mp4">
+        <source src="video/codigo.webm" type="video/webm">    
+        <source src="video/codigo.ogv" type="video/ogg">
+            <p>Tu navegador no soporta video</p>
+    </video>
+    
+
+    <h2>Videos en HTML5</h2>
+
+    <audio controls preload="none" autoplay loop>
+        <source src="audio/audio.mp4" type="audio/mp4">
+        <source src="audio/audio.oga" type="audio/ogg">
+    </audio>
+
+
+</body>
+</html>

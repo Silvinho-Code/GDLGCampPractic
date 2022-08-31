@@ -1,0 +1,58 @@
+/**font family: (Fuentes seguras)*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    /*font-size: 3rem;
+    font-size: 4em;  por el momento estas son otras medidas en las letras*/
+     font-style: italic;
+    text-transform: uppercase; /*todas en mayusculas*/
+    font-weight: normal; /*remueve la negrita del titulo*/ 
+
+    /*Una manera de ahorrar codigo para resumir todos los valores en una linea, es la siguiente: */
+ /*   font: italic small-caps normal 30px/30px verdana;
+    /*no me gusta mucho pero de algo servirá*/
+
+    text-align: centrer;
+    letter-spacing: 5px; /*espaciado entre letras*/
+ /*   text-indent: 200px; /*hala el texto a la derecha si es positivo o viceversa*/
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 23px;
+    font-variant: small-caps; /*son todas mayusculas pero la primera es mas grande que las demas*/
+    text-align: center;
+}
+p {
+    font-family: Geneva, Helvetica, sans-serif;
+    font-size: 18px;
+    text-transform: capitalize; /*la primera en mayuscula*/
+    line-height: 30px;
+    text-align: justify;
+}
+#listado-cursos li {
+    text-transform: lowercase; /*todas en minusculas*/
+}
+#listado-cursos li em {
+    font-style: normal;
+}
+div.noticia p {
+    text-indent: 50px;
+}
+a {
+    font-size: 13px;
+    text-decoration: none; /*quita decoracion del tecto en este caso, el subrayado*/
+    font-weight: bold;
+}
+section#introduccion p {
+    font-variant: small-caps;
+}
+section#introduccion p span {
+    font-style: italic;
+    text-decoration: underline; /*aplica subrayado*/
+}
+p.oferta span {
+    text-decoration: line-through; /*aplica una linea de tachado*/
+}

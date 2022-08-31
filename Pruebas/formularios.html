@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Formulario y campos</title>
+
+        <link rel="stylesheet" href="css/normaliza.css">
+        <link rel="stylesheet" href="css/estilos.css">
+
+    </head>
+    <body>
+
+        <!--Encabezado-->
+        <h2>Creando los formularios</h2>
+
+        <!--Formularios-->
+        <form class="formulario"> <!--El atributo "novalidate", invalida los campos que han sido de manera obligatoria-->
+
+            <!--Primer fieldset-->
+
+            <!--Nos permite agrupar nuestros campos y enmarcarlos en un recuadro-->
+            <fieldset> 
+                
+                <!--"Legend", Le da nombre a nuestro recuadro que enmarca el formulario-->
+                <Legend>Tus datos</Legend>
+                <!--El atributo "for" en label, nos permite hacer la acción de seleccionar la caja o botón a la hora de clickear la palabra-->
+                <label for="nombre">Nombre:</label>
+                <!--El input no tiene cierre y el atributo "autocomplete", nos permite autorellenar los campos-->
+                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" autocomplete="on" required>
+
+                <!--Esto nos permite separar las partes del formulariocon un espacio hacia abajo, como el "enter"-->
+                <br><br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Tu apellido" autocomplete="off" required>
+                <br>
+                <label for="sexo">Sexo:</label> <br>
+                <!--El "radio" nos permite generar opciones para que el usuario elija una de ellas-->
+                <input type="radio" name="sexo" id="sexo" value="Hombre" checked>Hombre <br>
+                <input type="radio" name="sexo" id="sexo" value="Mujer">Mujer <br>
+                <input type="radio" name="sexo" id="sexo" value="otro">Otro <br>
+                
+                <br><br>
+                <label>Fecha de cumpleaños</label> <br>
+                <!--"Type=date", es para poder agregar la fecha-->
+                <input type="date" name="fecha"> <br>
+                <!--También "datatime-local", tiene problemas con nuevas sintaxis-->
+                <input type="datetime-local" name="fecha">
+
+                <br><br>
+                <!--El atributo "for" y "id", se enlazan para que cuando uno clickee ya sea la caja o el nombre de la caja, siempre se active el modo escritura-->
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="correo@dominio.com" required>
+
+                <br><br>
+                <label for="web">Tu sitio web</label>
+                <input type="url" name="sitioweb" id="web" placeholder="http://www.dominio.com">
+
+                <br><br>
+                <label>Cuánto sabes de HTML</label>
+                <!--El nos permite hacer una valoración de canto uno puede tener en puntuación-->
+                <input type="range" name="puntaje" min="0" max="10">
+
+                <br><br>
+                <label>CPersonas que vienen contigo</label>
+                <!--El nos permite poner el número máximo que uno desee-->
+                <input type="number" name="cantidad" min="1" max="10">
+
+
+
+            </fieldset>
+
+            <!--Segundo "fieldset-->
+            <fieldset>
+                <legend> Información sobre tu curso</legend>
+                <label for="turno">Turno</label>
+
+                <!--"Select", crea una caja desplegable para elegir las opciones-->
+                <select class="turno" name="turno" id="turno">Turno
+                    <option value="matutino">Matutino</option>
+                    <option value="vespertino">Vespertino</option>
+                    <option value="nocturno">Nocturno</option>
+                </select>
+
+                <br><br>
+
+                <label for="encuesta">¿Que cursos te gustaría que agregaramos?</label>
+                <input  list="propuesta" name="encuesta" id="encuesta">
+
+                <!--"datalist", crea una caja autorellenable que al crlickear o escribir una letra, se abren las demás opciones aun que no se vean en un inicio-->
+                <datalist id="propuesta">
+                    <!--Sección de "option value", lista en caja de "hover"-->
+                    <!--"option sin cierre, creo una lista no visible"-->
+                    <option value="jQuery">
+                    <option value="Aplicacioines Web">
+                    <option value="AngularJS">
+                    <option value="Bootstrap">
+                </datalist>
+                
+                <br><br>
+                
+                <!--Sección de checkbox-->
+        
+                <label for="">Elije tus cursos:</label> <br>
+                <!--Los "checkbox", permiten elegir distintas opciones de las ofertadas de manera personalizada-->
+                <input type="checkbox" value="php">PHP <br>
+                <input type="checkbox" value="html5">HTML5 <br>
+                <input type="checkbox" value="css">CSS <br>
+                <input type="checkbox" value="mysql">MySQL <br>
+                <input type="checkbox" value="javascript">JavaScript <br>
+                <input type="checkbox" value="jquery">JQuery <br>
+                
+                <br>
+                <label>Fecha que desea iniciar el curso</label> <br>
+                <!--Los tipos de fecha ya no hacen la misma función que el vídeo, hay que buscar los nuevos atributos para hacer que desplegue el calendario-->
+                <input type="datetime" name="fecha"> <br>
+                 <input type="week" name="fecha"> <br>
+                 <input type="time" name="fecha">
+               
+
+            </fieldset>
+            
+            <br>
+
+            <!--Tercer feildset-->
+            <fieldset>
+                <legend>Extra</legend>
+                <label>Las primeras 10 persona reciben una camisa gratis, elige el color</label>
+                <!--"Type=color", Nos cre una caja para elegir un color-->
+                <input type="color" name="color">
+            </fieldset>
+
+            <br>
+
+            <!--Cuarto fieldset-->
+            <fieldset>
+                <legend>Usuario y pasword</legend>
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario" required> <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="password" required> <br>
+            </fieldset>
+            
+            <br>
+            
+            <!--Sección de "Enviar" formulario-->
+            <button type="reset">Borrar</button>
+            <!--"button type=submit", mayormente se usa para complementarlo con JavaScript-->
+            <button type="submit" disabled>Enviar</button>
+            <!--Es el que normalmente se usa para enviar-->
+            <input type="submit" value="Enviar"> 
+
+        </form>
+
+    </body>
+</html>

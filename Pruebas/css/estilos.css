@@ -1,0 +1,205 @@
+/* Selectores de ID´s*/
+#titulo {
+    color: red;
+}
+
+#logo {
+/*    margin-top: 20px;*/
+}
+
+
+/* Selectores de clases */
+
+.rojo {
+    color: red;
+}
+.rojo {
+    color: blue;
+}
+/*en el orden de los colores, siempre prevalecerá el que esté al último*/
+.logo {
+    margin-top: 20px;
+}
+
+/*Selectores de clase y ID*/
+/*En este caso, el hecho de seleccionar tanto ID y clases, tomaria siemore primer lugar, aunque haya otro id o clase separados que intente cambiarlo*/
+#titulo.titulo {
+    font-size: 60px;
+}
+/*la doble seleccion tiene un mayor peso a la hora de seleccionar*/
+.titulo {
+    font-size: 30px;
+}
+
+/*Selectores con 2 clases*/
+.azul.tituloCurso{
+    color: blue;
+}
+.tituloCurso.azul{
+    color: lawngreen;
+}
+/*estas otras clases no afectan a la anterior ya que esta está seleccionada con las 2 clases*/
+.azul {
+    color: red;
+}
+tituloCurso {
+    color: black;
+}
+
+/*Selectores con elementos HTML*/
+p {
+    color: darkblue;
+}
+h2 {
+    color: orange;
+}
+h3 {
+    color: cadetblue;
+}
+img {
+    width: 200px;
+}
+
+/*Selectores con elementos HTML y ID*/
+img#logo {
+    width: 700px;
+}
+h2#titulo {
+    color: orange;
+} /*en el caso de los id´s y titulos, los id´s tienen mayor peso y sobresaldran a la hora de asignar estilos*/
+h2.titulo {
+    color: yellow;
+}
+section#introduccion {
+    background: lightskyblue;
+}
+
+/*Selectores con elementos HTML y clases*/
+
+section.seccion {
+    background: lightgreen;
+}
+section#noticias { 
+    background: lightgrey;
+}
+div.noticias {
+    background: white;
+}
+.articulo2 {
+    background: coral;
+}
+
+/*Selector Universal*/
+/*Esto nos selecciona todo nuestro contenido y con "!important", hace que todo y sin importr cual, se torne a como es declarado en el selctor universal*/
+/*
+* {
+    color: black!important;
+    font-size: 20px!important;
+} */
+#listado-cursos * {
+    color: red;
+    font-size: 20px;
+}
+.noticias * {
+    font-size: 20px;
+}
+
+/*Seleccionando grupos*/
+/*horizantal*/
+h2, h3, p ,a {
+    text-transform: uppercase;
+}
+/*vertical (no hay que olvidar las comas y el ultimo no lleva coma)*/
+h2,
+h3 {
+    text-align: center;
+}
+
+/*Selector descendiente*/
+nav#navegacion { 
+    background: orange;
+}
+nav#navegacion ul { 
+    list-style: none;
+}
+nav#navegacion ul li {
+    display: inline;
+}
+nav#navegacion ul li a { 
+    color: white;
+}
+
+/*Selector con hijos*/
+section#cursos > ul {
+    border: 1px solid black;
+}
+ul#listado-cursos > li {
+    color: red;
+}
+ul#listado-cursos li ul > li {
+    color: green;
+}
+
+/*Selector con elementos adyacentes*/
+ul#listado-cursos + p {
+    background-color: darkcyan!important;
+    color: white;
+}
+
+/*Selector para enlaces*/
+a[hr*="www.facebook.com"] {
+    background-color: yellowgreen;
+}
+a[hr*="google.com"] {
+    background-color: purple;
+}
+
+/*Selectores de atributos*/
+img[id=logo] {
+    margin-top: 0px;
+}
+[class="seccion"] {
+    background-color: lightgrey!important;
+}
+
+/*Selectores de Pseudo clases*/
+div.menu nav ul li a:focus,
+div.menu nav ul li a:visited, /*Este es el más utilizado*/
+div.menu nav ul li a:active {
+    color: black;
+}
+
+div.menu nav ul li:first-child a {
+    text-decoration: none;
+}
+div.menu nav ul li:last-child a {
+    text-decoration: none;
+}
+div.menu nav ul li a:hover {
+    background-color: blueviolet;
+}
+/*"hover", Tambien se le puede aplicar a un texto normal*/
+h3:hover {
+    color: chartreuse;
+}
+
+/*Selectores de Pseudo clases y NTH_CHILD*/
+div.menu nav ul li:nth-child(1) {
+    background-color: red;
+}
+div.menu nav ul li:nth-child(2) {
+    background-color: purple;
+}
+div.menu nav ul li:nth-child(3) {
+    background-color: orange;
+}
+div.menu nav ul li:nth-child(4) {
+    background-color: blue;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: chocolate;
+}
+table tbody tr:nth-child(even) {
+    background-color: darkcyan;
+}

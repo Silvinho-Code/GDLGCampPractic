@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página con HTML5 1.1</title>
+
+    <link rel="stylesheet" href="css/normaliza.css">
+    <!--"Normaliza", son codigos en css que generalizan las visualizaciones en los diferentes navegadores para que en todos sea consistente el contenido que se muestra-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--formas para escribir css
+        Etiqueta: h2, nav, div, etc.
+        id: #titulo, #noticias, #(cualquier nombre que usemos en un "id")
+        clases: .contendor, .logo, .navegacion, etc.... se cita con un ponto ( . )-->
+
+</head>
+<body>
+    <!--Parte principal del contenido y practicas-->
+    <div class="contenedor">
+            <header role="banner"> <!--el "header" le da mejor presentacion a la semantica y al tratar de encontrarlos-->
+                <div class="logo-contenedor">
+                    <img src="img/logo.png" class="logo" alt="logo empresa" id="logo">
+                </div>
+            </header>
+    
+            <nav id="navegacion" class="navegacion" role="navigation">
+                    <ul>
+                        <li><a href="nostros.html">Sobre Nosotros</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="http://google.com" target="_blank" >Ir a Google</a></li>
+                        <!--otro atributo de "target" es "_self (viene por defoult)" pero éste no mada a una pagina en blanco a como lo hace "_blank (abre el enlace en una nueva pestaña)"-->
+                    <li><a href="#noticias">Ir a Noticias</a></li>
+                </ul>
+    
+                    <br>
+                <a href="naipes.html">Ir a Naipes</a>
+            </nav>
+
+            <main class="Contenido principal" role="main">
+                <section id="introduccion" class="seccion">
+                    <h2 id="titulo" class="titulo">Aprendiendo HTML5 y CSS3</h2>
+                    <img src="img/css3.png" alt="logo css3">
+                    <p class="rojo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse doloremque quos, quo illum illo fugit eius saepe animi enim placeat expedita delectus blanditiis cumque sint pariatur culpa suscipit corrupti.</p>
+
+                    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit tempore, distinctio suscipit rerum officiis soluta cum beatae, veniam quas illo, doloremque consequatur doloribus non. Cum voluptatem nostrum dolor maxime distinctio!</span></p>
+                </section>
+
+                <section id="cursos" class="seccion">
+                    <!--de esta manera se pueden agregar 2 nombres de clases en una sola case y anque haya otra clase que contenga unos de los nombres, no le afectará ya que tendremos los 2 nombres de la primer clase seleccionandola y haciendola única-->
+                    <h2 class="azul tituloCurso">Nuestros Cursos</h2>
+                    
+                    <ul id="listado-cursos">
+                        <li class="green">Diseño Web
+                            <ul>
+                                <li>CSS3</li>
+                                <li>HTML5</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <!--<p>A los mejores precios</p>-->
+                    </ul>
+                    
+                    <p >No te quedes fuera</p>
+                    <button>Ver todos</button>
+                    <a href="http://www.facebook.com" id="btnCursos" class="button cursos">Ver todos los cursos</a>
+
+                    <div>
+                        <h3>HTML5</h3>
+                        <img src="img/html5.png" alt="Logo HTML5" height="200">
+                        <a href="docs/programa-html5.pdf" download>Descargar Programa</a>
+                        <!--de esta manera podemos agregar archivos para descargar. La opción de descarga debería de funcionar, pero a mi no me funcionó-->
+                    </div>
+
+                    <div>
+                        <h3>CSS3</h3>
+                        <img src="img/css3.png" alt="Logo CSS3" height="200">
+                    </div>
+
+                    <div>
+                        <h3>JavaScript</h3>
+                        <img src="img/js.jpg" alt="Logo JavaScript" height="200">
+
+                        
+                    </div>
+
+                    <div>
+                        <p>Ventajas de este Curso</p>
+                        <ul> <!--Listas Desordenadas-->
+                            <li>Lo puedes tomar en línea
+                                <ul>
+                                    <li>En casa</li>
+                                    <li>A cualquier hora del día</li>
+                                </ul>
+                            </li>
+                            <li>Avanzar a tu ritmo</li>
+                            <li>Puedes preguntar tus dudas al instructor</li>
+                        </ul>
+
+                        <p class="rojo">Temario del curso</p>
+                        <ol> <!--Listas ordenadas-->
+                            <li>Básico de HTML</li>
+                            <li>etiquetas HTML</li>
+                            <li><img src="img/logo.png" alt="Logo Empresa" height="20"></li> <!--Podemos agregar imagenes y todo-->
+                            <li>Crear Enlaces</li>
+                                <ul> <!--Las Podemos mezclar entre ellas-->
+                                    <li>Con Imageness</li>
+                                    <li>Con Links</li>
+                                    <li>Con Multimedia</li>
+                                </ul>
+                            <li>Crear Listas</li>
+                                <ul>
+                                    <li>Ordenadas</li>
+                                    <li>Desordenadas</li>
+                                </ul>
+                        </ol>
+
+                        <p>Lo que debes aprender para ser un desarrollador web</p>
+                        <dl> <!--Listas definitivas-->
+                            <!--se utilizan bien lista de menu de restaurantes o portafolios, etc.-->
+                            <dt>HTML5</dt>
+                            <dd>Agrega estructura a tu desarrollo</dd> <!--lista de definición-->
+                            <dt>CSS3</dt>
+                            <dd>Agrega presentación a tu desarrollo</dd>
+                            <dt>JavaScript</dt>
+                            <dd>Agrega inteligencia a tu desarrollo</dd>
+                        </dl>
+                    </div>
+                </section>
+    
+                <section id="noticias">
+                    <div class="noticias">
+                        <h2>Ultimas Noticias</h2>
+                        <!--Los "articule" sirven para seccionar y diferenciar de contenido que no tiene nada que explicar a como cuando se agrupan imagenes sin mucho que decir.
+                        En ellos estarán los articulos, entradas de blog, entradas de foro, etc.-->
+                        <article role="articulo">
+                            <h3>Aprender a programar en el siglo XXI es muy importante</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem error ipsum doloribus quo voluptatum dolorem impedit nihil laboriosam delectus reiciendis sequi, ducimus voluptas sapiente voluptates dolores! Magni, cum dignissimos. Doloribus!</p>
+                        </article>
+                        <article class="articulo2" role="articulo2">
+                            <h3>Aprender a programar en el siglo XXI es muy importante</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quasi similique molestias rerum, eaque amet! Ipsam quos aliquam omnis fugiat numquam incidunt earum laborum nostrum, sit nulla nam quaerat. Facere!</p>
+                        </article>
+                    </div>
+                    <a href="http:/www.google.com.ni">Ver todas las noticias</a>
+                </section>
+            </main>
+
+            <!--El "aside", crea una sección en la que puede no estar relacionada con el contenido principal de la página-->
+            <aside role="complementary">
+                
+                    <table width="300">
+                        <!--El "Caption" centra el contenido horizontamente de su ancho-->
+                        <caption><h2>Próximos Cursos</h2></caption>
+                        <thead>
+                            <tr>
+                                <th>Curso</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <!--El "Colspan" es que te une 2 celdas(filas) en uno y podemos darle otros atributos-->
+                                <td colspan="2" align="center">
+                                No te lo puedes perder
+                                </td>
+                            </tr>
+                        </tfoot>
+
+                        <tbody>
+                            <tr>
+                                <!--Con el "Rowspan" podemos unir varias ofertas repetidas en una y simplificar las columnas en que hay cosas en común (hay que especificar cuantas filas se agruparán)-->
+                                <td rowspan="3">PHP</td>
+                                <td>$90</td>
+                            </tr>
+                            <tr>
+                                <td>$90 (Sabatino)</td>
+                            </tr>
+                            <tr>
+                                <td>$90</td>
+                            </tr>
+                            <tr>
+                                <td>MySQL</td>
+                                <td>$99</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>$99</td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>$99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                <!--<div>
+                    <h3>PHP</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae rerum explicabo reprehenderit provident, ad obcaecati, exercitationem asperiores vero sit ea velit ducimus. Voluptas doloremque eius odit magnam molestias consectetur odio.</p>
+                </div>
+                <div>
+                    <h3>MySQL</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab necessitatibus ipsum unde dignissimos placeat molestiae debitis, possimus aspernatur tempore nulla eos quo non est quasi, aut vero, quibusdam consectetur. Fugit!</p>
+                </div>-->
+            </aside>
+        </div>
+    
+        <footer role="contentinfo">
+            <div class="Nosotros">
+                <h3>Sobre Nuestra Escuela</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptates dolore distinctio commodi optio. Reiciendis numquam ea eveniet beatae. Impedit modi iste assumenda repudiandae earum sapiente vero iure ipsa? Similique.</p>
+            </div>
+
+            <div class="menu">
+                <nav class="navegacion" role="navigation">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <p>Cursos de diseño web &ndash;<!--El amperson y "ndash", sirve para crear un guión.-->
+                Todos los derechos reservados &copy;
+            </p>
+        </footer>
+    
+    </body>
+</html>

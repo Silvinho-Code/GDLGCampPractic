@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Naipes</title>
+</head>
+<body>
+    
+<header role="banner">
+    
+    <nav class="navegacion" role="navigation">
+        <a href="index1.1.html">
+            <img src="img/logo.png" alt="Logo Empresa">
+        </a>    
+    </nav>
+</header>
+
+
+<p><h2>CARTAS</h2></p>
+
+    <div class="poker">
+        <div class="carta carta1">
+            &hearts;
+        </div>
+        <div class="carta carta2">
+            &clubs;
+        </div>
+        <div class="carta carta3">
+            &diams;
+        </div>
+        <div class="carta carta4">
+            &spades;
+        </div>
+        <p>Todos los derechos reservados &copy;</p>
+    </div>
+    
+</body>
+
+<style>
+    .poker {
+        width: 600px;
+        margin:0 auto;
+
+    }
+    .poker::after {
+        content:'';
+        display: table;
+        clear: both;
+    }
+    .carta {
+        float: left;
+        width: 48%;
+        text-align: center;
+        font-size: 160px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        margin-right: 5px;
+        height: 300px;
+        padding-top: 60px;
+    }
+    .carta1, .carta3 {
+        color: red;
+    }
+    .carta2, .carta4 {
+        margin-right: 0;
+        float:right;
+    }
+    p {
+        text-align: center;
+    }
+</style>
+</html>

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+div.contenedor {
+  max-width: 1100px;
+  margin:0 auto;
+}
+
+div.contenido-principal::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+@media only screen and (min-width:768px) {
+  div.contenido-principal > * { /*con "> *", seleciona el primer elemento hijo, no importa si es un "div" o "aside"*/
+      padding: 0 20px; /*separa el contenido de las orillas*/
+  }
+  div.principal {
+    width: 50%;
+    float: left;
+    margin-left: 25%;
+  }
+  aside.primera {
+    margin-left: -75%; /*hace que la columna se mueva a la izquierda*/
+    float: left;
+    width: 25%;
+  }
+  aside.segunda {
+    width: 25%;
+    float: right;
+  }
+}
